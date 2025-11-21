@@ -1,0 +1,80 @@
+
+# 2025-11-21 01:47:57.496000
++Code the following app
++```
++Jumping Dot – Game Prompt (English)
++
++Title: Jumping Dot
++
++Description:
++Create a simple 2D side-scrolling game where the player controls a small bouncing dot. The dot moves forward automatically, and the only action the player can perform is jumping. The goal is to survive as long as possible by jumping over obstacles.
++
++Core Mechanics:
++
++The dot moves horizontally at a constant speed.
++
++Player taps/clicks/presses to make the dot jump.
++
++Jump height depends on press duration (optional).
++
++Randomly generated obstacles appear on the ground (blocks, spikes, walls).
++
++Game ends on collision.
++
++Score increases based on distance traveled.
++
++Style & Feel:
++
++Minimalist graphics (simple shapes, flat colors).
++
++Smooth animations and responsive jump.
++
++Fast-paced but easy to learn.
++
++Retro arcade sound effects.
++
++Objective:
++Survive as long as possible, beat your high score, and avoid all obstacles.
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-21 01:47:57.496609
++Code the following app
++```
++Jumping Dot – Game Prompt (English)
++
++Title: Jumping Dot
++
++Description:
++Create a simple 2D side-scrolling game where the player controls a small bouncing dot. The dot moves forward automatically, and the only action the player can perform is jumping. The goal is to survive as long as possible by jumping over obstacles.
++
++Core Mechanics:
++
++The dot moves horizontally at a constant speed.
++
++Player taps/clicks/presses to make the dot jump.
++
++Jump height depends on press duration (optional).
++
++Randomly generated obstacles appear on the ground (blocks, spikes, walls).
++
++Game ends on collision.
++
++Score increases based on distance traveled.
++
++Style & Feel:
++
++Minimalist graphics (simple shapes, flat colors).
++
++Smooth animations and responsive jump.
++
++Fast-paced but easy to learn.
++
++Retro arcade sound effects.
++
++Objective:
++Survive as long as possible, beat your high score, and avoid all obstacles.
++```
++
++Generate an app logo and update the app metadata title and description.
