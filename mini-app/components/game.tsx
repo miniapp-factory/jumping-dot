@@ -10,6 +10,7 @@ const OBSTACLE_INTERVAL = 1500; // ms
 export default function Game() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [score, setScore] = useState(0);
+  const scoreRef = useRef(0);
   const [gameOver, setGameOver] = useState(false);
 
   // Dot state
@@ -113,7 +114,8 @@ export default function Game() {
       // Remove off-screen obstacles and increase score
       obstacles.current = obstacles.current.filter((obs) => {
         if (obs.x + obs.w < 0) {
-          setScore((s) => s + 1);
+          scoreRef.current++;
+          setScore(scoreRef.current);
           return false;
         }
         return true;
@@ -139,7 +141,7 @@ export default function Game() {
       // Draw score
       ctx.fillStyle = "#FFFFFF";
       ctx.font = "20px Arial";
-      ctx.fillText(`Score: ${score}`, 10, 30);
+      ctx.fillText(`Score: ${scoreRef.current}`, 10, 30);
 
       if (!gameOver) {
         animationFrameId = requestAnimationFrame(update);
