@@ -25,6 +25,7 @@ export default function Game() {
   const obstacles = useRef<Array<{ x: number; y: number; w: number; h: number }>>(
     []
   );
+  const starsRef = useRef<Array<{ x: number; y: number; alpha: number }>>([]);
 
   // Timing
   const lastObstacleTime = useRef(0);
