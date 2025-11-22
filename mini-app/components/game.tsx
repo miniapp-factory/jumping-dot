@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const GRAVITY = 0.6;
 const JUMP_VELOCITY = -12;
@@ -166,5 +167,14 @@ export default function Game() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="border rounded" />;
+  return (
+    <div className="relative">
+      <canvas ref={canvasRef} className="border rounded" />
+      {gameOver && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
+          <Button onClick={() => window.location.reload()}>Restart</Button>
+        </div>
+      )}
+    </div>
+  );
 }
