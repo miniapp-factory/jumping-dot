@@ -40,6 +40,12 @@ export default function Game() {
       canvas.height = window.innerHeight * 0.6;
       dot.current.y = canvas.height - dot.current.radius - 10;
       dot.current.onGround = true;
+      // Generate stars for galaxy background
+      starsRef.current = Array.from({ length: 200 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        alpha: Math.random() * 0.5 + 0.5,
+      }));
     };
     resize();
     window.addEventListener("resize", resize);
@@ -60,6 +66,14 @@ export default function Game() {
 
       // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw galaxy background
+      ctx.fillStyle = "#000022";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Draw stars
+      starsRef.current.forEach((star) => {
+        ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+        ctx.fillRect(star.x, star.y, 2, 2);
+      });
 
       // Update dot
       dot.current.vy += GRAVITY;
@@ -71,11 +85,6 @@ export default function Game() {
         dot.current.onGround = true;
       }
 
-      // Draw dot
-      ctx.fillStyle = "#FFD700";
-      ctx.beginPath();
-      ctx.arc(dot.current.x, dot.current.y, dot.current.radius, 0, Math.PI * 2);
-      ctx.fill();
 
       // Generate obstacles
       if (time - lastObstacleTime.current > OBSTACLE_INTERVAL) {
@@ -94,6 +103,11 @@ export default function Game() {
       obstacles.current.forEach((obs) => {
         obs.x -= OBSTACLE_SPEED;
       });
+      // Draw dot
+      ctx.fillStyle = "#FFD700";
+      ctx.beginPath();
+      ctx.arc(dot.current.x, dot.current.y, dot.current.radius, 0, Math.PI * 2);
+      ctx.fill();
 
       // Remove off-screen obstacles and increase score
       obstacles.current = obstacles.current.filter((obs) => {
@@ -116,7 +130,7 @@ export default function Game() {
       });
 
       // Draw obstacles
-      ctx.fillStyle = "#FFFFFF";
+      ctx.fillStyle = "#888888";
       obstacles.current.forEach((obs) => {
         ctx.fillRect(obs.x, obs.y, obs.w, obs.h);
       });
@@ -147,7 +161,7 @@ export default function Game() {
       window.removeEventListener("mousedown", handleJump);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [gameOver, score]);
+  }, []);
 
   return <canvas ref={canvasRef} className="border rounded" />;
 }
