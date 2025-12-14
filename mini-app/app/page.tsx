@@ -2,11 +2,6 @@ import { description, title } from "@/lib/metadata";
 import { generateMetadata } from "@/lib/farcaster-embed";
 import Game from "@/components/game";
 
-export const metadata = {
-  other: {
-    'base:app_id': '691fc7104956ef4421521a5a',
-  },
-};
 
 export { generateMetadata };
 
