@@ -634,3 +634,35 @@
 # 2025-12-14 14:31:21.802471
 +hataları düzelt
 +
+
+# 2025-12-14 14:46:56.155121
++import { Metadata } from 'next';
++
++export const metadata: Metadata = {
++  other: {
++    'base:app_id': '691fc7104956ef4421521a5a',
++  },
++};
++
++export default function Home() {
++  return (<div>{/* Your page content */}</div>);
++}
++Metatag base:app_id not found
++hataları düzelt
++
+
+# 2025-12-14 14:46:56.157878
++import { Metadata } from 'next';
++
++export const metadata: Metadata = {
++  other: {
++    'base:app_id': '691fc7104956ef4421521a5a',
++  },
++};
++
++export default function Home() {
++  return (<div>{/* Your page content */}</div>);
++}
++Metatag base:app_id not found
++hataları düzelt
++
