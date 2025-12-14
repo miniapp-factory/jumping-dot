@@ -153,7 +153,7 @@ export default function Game() {
         ctx.font = "30px Arial";
         ctx.fillText("Game Over", canvas.width / 2 - 80, canvas.height / 2);
         ctx.font = "20px Arial";
-        ctx.fillText(`Final Score: ${score}`, canvas.width / 2 - 70, canvas.height / 2 + 30);
+        ctx.fillText(`Final Score: ${scoreRef.current}`, canvas.width / 2 - 70, canvas.height / 2 + 30);
       }
     };
 
