@@ -666,3 +666,31 @@
 +Metatag base:app_id not found
 +hataları düzelt
 +
+
+# 2025-12-14 14:55:20.553947
++Metatag base:app_id not found
++import { Metadata } from 'next';
++
++export const metadata: Metadata = {
++  other: {
++    'base:app_id': '691fc7104956ef4421521a5a',
++  },
++};
++
++export default function Home() {
++  return (<div>{/* Your page content */}</div>);
++}
+
+# 2025-12-14 14:55:20.554375
++Metatag base:app_id not found
++import { Metadata } from 'next';
++
++export const metadata: Metadata = {
++  other: {
++    'base:app_id': '691fc7104956ef4421521a5a',
++  },
++};
++
++export default function Home() {
++  return (<div>{/* Your page content */}</div>);
++}
