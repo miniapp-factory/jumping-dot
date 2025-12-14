@@ -1,9 +1,11 @@
 import { description, title } from "@/lib/metadata";
 import { generateMetadata } from "@/lib/farcaster-embed";
 import Game from "@/components/game";
+import { metadata } from '@/lib/metadata';
 
 
 export { generateMetadata };
+export { metadata };
 
 export default function Home() {
   // NEVER write anything here, only use this page to import components
